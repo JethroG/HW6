@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    tools:context=".TodayFragment">
+
+  <LinearLayout
+      android:id="@+id/weater_panel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:visibility="gone">
+      
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/txt_city_name"
+          android:textColor="@color/colorPrimary"
+          android:textSize="24sp"
+          android:textStyle="bold"
+          android:text="Weather in Cherkassy, UA"/>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+
+          <ImageView
+              android:layout_width="80dp"
+              android:id="@+id/img_weather"
+              android:layout_height="80dp"
+              android:src="@mipmap/ic_launcher"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/txt_temp"
+              android:layout_marginLeft="8dp"
+              android:textColor="@color/colorPrimary"
+              android:textSize="50sp"
+              android:textStyle="bold"
+              android:text="14 C"/>
+
+
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/txt_description"
+          android:textColor="@color/colorPrimary"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:text="Weather in Cherkassy, UA"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/txt_data_time"
+          android:textColor="@color/colorPrimary"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:text="Weather in Cherkassy, UA"/>
+      <TableLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/border"
+          android:stretchColumns="*"
+          android:padding="16dp"
+          android:layout_marginTop="10dp">
+
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Wind"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+                  android:layout_column="1"
+                  android:layout_marginLeft="8dp"
+                  android:text="Speed : 1 Deg : 1 "
+                  android:id="@+id/txt_wind"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Pressure"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+
+                  android:layout_column="1"
+                  android:layout_marginLeft="8dp"
+                  android:text="1013 hpa "
+                  android:id="@+id/txt_wpressu"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Humidity"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+
+                  android:layout_column="1"
+                  android:layout_marginLeft="8dp"
+                  android:text="100%"
+                  android:id="@+id/txt_humidity"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Sunrise"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+
+                  android:layout_column="1"
+                  android:layout_marginLeft="8dp"
+                  android:text="11:00 "
+                  android:id="@+id/txt_sunrise"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Sunset"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+
+                  android:layout_marginLeft="8dp"
+                  android:text="18:00"
+                  android:id="@+id/txt_set"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content">
+
+              <TextView
+                  android:background="@drawable/border"
+                  android:text="Goe Coords"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+              <TextView
+
+                  android:layout_marginLeft="8dp"
+                  android:text="[32.12   48,0]"
+                  android:id="@+id/txt_geo"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  />
+
+          </TableRow>
+
+
+      </TableLayout>
+
+
+
+
+
+  </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
